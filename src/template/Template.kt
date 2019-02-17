@@ -1,11 +1,12 @@
 package template
 
-private val scanner = java.util.Scanner(System.`in`)
+import java.util.*
 
-private fun readInts(n: Int) = Array(n) { scanner.nextInt() }
-private fun readLongs(n: Int) = Array(n) { scanner.nextLong() }
-private fun readLineInts() = readLine()!!.split(" ").map { it.toInt() }.toTypedArray()
-private fun readLineLongs() = readLine()!!.split(" ").map { it.toLong() }.toTypedArray()
+private fun readInts() = readLine()!!.split(" ").map { it.toInt() }
+private fun readLongs() = readLine()!!.split(" ").map { it.toLong() }
+private fun <K, V> Map<out K, V>.toMutableMap(): MutableMap<K, V> = LinkedHashMap(this)
+private fun <K, V> mutableMapOf(): MutableMap<K, V> = LinkedHashMap()
+private fun <K, V> mutableMapOf(vararg pairs: Pair<K, V>) = pairs.toMap().toMutableMap()
 
 fun main(args: Array<String>) {
 }
